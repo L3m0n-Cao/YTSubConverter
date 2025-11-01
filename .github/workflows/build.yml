@@ -20,6 +20,9 @@ jobs:
 
     - name: Restore NuGet packages
       run: nuget restore YTSubConverter.sln
+    
+    - name: Restore dotnet packages 
+      run: dotnet restore YTSubConverter.Shared/YTSubConverter.Shared.csproj
 
     - name: Build YTSubConverter.UI.Win
       run: msbuild YTSubConverter.UI.Win/YTSubConverter.UI.Win.csproj /p:Configuration=Release /p:Platform=AnyCPU
