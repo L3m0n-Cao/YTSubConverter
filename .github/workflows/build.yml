@@ -21,8 +21,8 @@ jobs:
     - name: Restore NuGet packages
       run: nuget restore YTSubConverter.sln
 
-    - name: Build YTSubConverter.UI.Win (x64)
-      run: msbuild YTSubConverter.UI.Win/YTSubConverter.UI.Win.csproj /p:Configuration=Release /p:Platform=x64
+    - name: Build YTSubConverter.UI.Win
+      run: msbuild YTSubConverter.UI.Win/YTSubConverter.UI.Win.csproj /p:Configuration=Release /p:Platform=AnyCPU
 
     - name: Upload EXE artifact
       uses: actions/upload-artifact@v4
