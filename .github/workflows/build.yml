@@ -25,10 +25,10 @@ jobs:
       run: dotnet restore YTSubConverter.Shared/YTSubConverter.Shared.csproj
 
     - name: Build YTSubConverter.UI.Win
-      run: msbuild YTSubConverter.UI.Win/YTSubConverter.UI.Win.csproj /p:Configuration=Release /p:Platform=AnyCPU
+      run: msbuild YTSubConverter.UI.Win/YTSubConverter.UI.Win.csproj /p:Configuration=Release /p:Platform=x64
 
     - name: Upload EXE artifact
       uses: actions/upload-artifact@v4
       with:
         name: YTSubConverter.UI.Win-exe
-        path: YTSubConverter.UI.Win/bin/Release/YTSubConverter.exe
+        path: YTSubConverter.UI.Win/bin/x64/Release/YTSubConverter.exe
